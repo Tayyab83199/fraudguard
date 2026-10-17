@@ -2,7 +2,11 @@
 
 FraudGuard is a Django & Machine Learning based fraud detection platform designed to predict and flag fraudulent UPI transactions in real-time.
 
-## Project Structure
+> 👥 **Team Members:** Please check the [Team Member Onboarding & Setup Guide (TEAM_SETUP_GUIDE.md)](TEAM_SETUP_GUIDE.md) for full setup instructions, Git workflow, and troubleshooting.
+
+---
+
+## 📁 Project Structure
 ```
 fraudguard/
 ├── config/               # Django project settings & URL routing
@@ -17,52 +21,32 @@ fraudguard/
 ├── static/               # CSS, JS, and image assets
 ├── .env.example          # Environment variable template
 ├── manage.py
-└── requirements.txt
+├── requirements.txt
+└── TEAM_SETUP_GUIDE.md   # Step-by-step setup guide for team members
 ```
 
-## Team Setup Instructions
+---
 
-### 1. Clone the repository
+## Quick Start (Summary)
+
 ```bash
-git clone <repo-url>
+git clone https://github.com/Wasil728/fraudguard.git
 cd fraudguard
-```
 
-### 2. Set up virtual environment
-```bash
-# Windows
+# Virtual environment
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate   # Mac/Linux: source venv/bin/activate
 
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-```bash
+# Install requirements
 pip install -r requirements.txt
-```
 
-### 4. Configure environment variables
-Copy `.env.example` to `.env` and fill in your MySQL credentials:
-```bash
-# Windows
-copy .env.example .env
+# Environment variables
+copy .env.example .env  # Mac/Linux: cp .env.example .env
 
-# macOS / Linux
-cp .env.example .env
-```
-
-### 5. Create MySQL Database
-```sql
-CREATE DATABASE fraudguard CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-### 6. Run Migrations & Start Server
-```bash
+# Database & Migrations (Create DB 'fraudguard' in MySQL first)
 python manage.py migrate
+python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Open `http://127.0.0.1:8000/` in your browser.
+For full details, see **[TEAM_SETUP_GUIDE.md](TEAM_SETUP_GUIDE.md)**.
