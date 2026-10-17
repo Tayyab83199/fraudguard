@@ -1,0 +1,10 @@
+venv/
+.env
+data/
+__pycache__/
+*.pyc
+staticfiles/
+.ipynb_checkpoints/
+ml/artifacts/*
+!ml/artifacts/.gitkeep
+.vscode/
